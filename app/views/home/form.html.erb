@@ -1,0 +1,10 @@
+params: <%= params.inspect %><br/>
+@params: <%= @params.inspect %>
+
+<form>
+  <%= Time.now %>
+
+  <input type="text" name="name" value="StimulusReflex">
+
+  <input type="button" data-reflex="click->Form#submit" value="Submit">
+</form>
