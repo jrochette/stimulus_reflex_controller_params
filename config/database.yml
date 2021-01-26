@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: harness_production
-  username: harness
-  password: <%= ENV['HARNESS_DATABASE_PASSWORD'] %>
+  database: harness_development
+

@@ -26,9 +26,10 @@ export default class extends ApplicationController {
   //  element.innerText = 'Updating...'
   // }
 
-  // updateSuccess(element, reflex) {
-  //   element.innerText = 'Updated Successfully.'
-  // }
+  toggle(element, reflex) {
+    console.log("calling reflex manually...")
+    this.stimulate("FormReflex#toggle")
+  }
 
   // updateError(element, reflex, error) {
   //   console.error('updateError', error);

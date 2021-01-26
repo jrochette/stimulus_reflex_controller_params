@@ -1,10 +1,11 @@
 params: <%= params.inspect %><br/>
 @params: <%= @params.inspect %>
 
-<form>
-  <%= Time.now %>
+<%= link_to "test", form_path(page_params.merge({test_param: "test"})) %>
 
-  <input type="text" name="name" value="StimulusReflex">
-
-  <input type="button" data-reflex="click->Form#submit" value="Submit">
-</form>
+<div data-controller="example">
+  <button name="button" type="button" data-action="click->example#toggle">Click</button>
+  <% if @flag == true %>
+    <span>FLAG IS ON WITH <%= params.inspect %></span>
+  <% end %>
+</div>
